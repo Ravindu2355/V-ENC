@@ -6,9 +6,9 @@ import subprocess
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-API_ID = os.getenv("tk")
+API_ID = int(os.getenv("apiid"))
 API_HASH = os.getenv("apihash")
-BOT_TOKEN = int(os.getenv("apiid"))
+BOT_TOKEN = os.getenv("tk")
 
 app = Client("encoder_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
