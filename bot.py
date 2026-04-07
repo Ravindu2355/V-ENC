@@ -155,8 +155,8 @@ async def process_video(client, status_msg, settings):
     thumb_path = f"{msg.id}.jpg"
 
     # DOWNLOAD
-    await download(client, msg, input_path, status_msg)
-
+    #await download(client, msg, input_path, status_msg)
+    input_path = await download(client, msg, f"{msg.id}", status_msg)
     # DURATION
     duration = float(subprocess.check_output([
         "ffprobe","-v","error",
